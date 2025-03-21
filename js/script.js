@@ -43,7 +43,7 @@ console.log(myAverageScore([45, 63, 85, 70]));
 console.log(myAverageScore([77, 82, 60, 58]));
 console.log(myAverageScore([93, 99, 93, 96]));*/
 
-
+/*
 const myAverageScore = function (array) {
 
     let total = 0;
@@ -85,3 +85,82 @@ console.log(myAverageScore([100, 75, 81, 96]));
 console.log(myAverageScore([45, 63, 85, 70]));
 console.log(myAverageScore([77, 82, 60, 58]));
 console.log(myAverageScore([93, 99, 93, 96]));
+
+
+*/
+
+
+
+/*callbacks
+
+
+
+const print = function (message ){
+
+    console.log(message)
+};
+
+
+const order = function (callback ){
+
+    const string = 'Hello';
+    console.log(message)
+    callback(string)//Hello
+};
+
+
+order(print);
+
+
+/*2
+
+function greet (name, callback ){
+
+    console.log('Hello' + name);
+    callback();
+};
+
+
+function sayGoodbye(){
+
+    console.log('Goodbye!')
+};
+
+greet ('Matviy', sayGoodbye)
+
+
+*/
+
+/*3
+  
+
+const repeat = function (n){
+    for(let i = 0; i < n; i++){
+        console.log(i)
+    }
+
+}
+
+repeat(5);
+repeat(20);
+repeat(2);
+*/
+
+
+const print = function ( value ){
+    console.log(value);
+};
+
+
+const pretty = function (value){
+    console.log('Logging value:', value)
+
+}
+
+const repeat = function ( n, action){
+    for ( let i = 0; i < n; i++ ){
+        action(i)
+    }
+}
+
+repeat(3,pretty)
