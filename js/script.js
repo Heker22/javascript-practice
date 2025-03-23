@@ -147,20 +147,46 @@ repeat(2);
 */
 
 
-const print = function ( value ){
+const print = function (value) {
     console.log(value);
 };
 
 
-const pretty = function (value){
+const pretty = function (value) {
     console.log('Logging value:', value)
 
 }
 
-const repeat = function ( n, action){
-    for ( let i = 0; i < n; i++ ){
+const repeat = function (n, action) {
+    for (let i = 0; i < n; i++) {
         action(i)
     }
 }
 
-repeat(3,pretty)
+repeat(3, pretty)
+
+
+
+/*ДЗ лдя 24/03/25*/
+
+/*Scrivere una funzione calcola(a, b, callback) che accetta due numeri e una funzione di callback. La richiamata deve eseguire l'operazione matematica di aggiunta di numeri.*/
+
+/*1*/
+
+
+const calculate = function ( a, b, callback ){
+
+    console.log(callback);
+};
+
+const operation = function (callback){
+
+    const add = a + b ; 
+    
+    callback(add);
+};
+
+
+calculate(10,5,0);
+
+console.log(calculate);
