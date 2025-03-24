@@ -171,22 +171,60 @@ repeat(3, pretty)
 
 /*Scrivere una funzione calcola(a, b, callback) che accetta due numeri e una funzione di callback. La richiamata deve eseguire l'operazione matematica di aggiunta di numeri.*/
 
-/*1*/
+/*1
 
 
 const calculate = function ( a, b, callback ){
 
-    console.log(callback);
+    return callback( a, b);
 };
 
-const operation = function (callback){
+const operation = function (a, b){
 
-    const add = a + b ; 
+    return a + b;
+};
+
+console.log(calculate(10,5 , operation));
+
+*/
+
+
+/*Фільтрація масиву
+
+const filter = function ( array, test ){
+
+    const filtredEl = [];
+
+    for ( const el of array){
+
+        const passed = test(el);
+        
+    }
+
+    if ( passed ){
+        filtredEl.push(el)
+    }
+
     
-    callback(add);
+
+    return filtredEl
 };
 
+*/
 
-calculate(10,5,0);
 
-console.log(calculate);
+/*arrow method*/
+
+const add = (a, b, c) => { a + b + c };
+
+const add1 = x => x * 5;
+
+const add3 = () => {
+    console.log('Hello')     /*<----- anonimus function*/
+};
+
+const add4 = (...args) => {
+    console.log(args);
+}
+
+add4(1, 2, 3, 4, 5);
