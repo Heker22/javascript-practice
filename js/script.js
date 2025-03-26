@@ -213,14 +213,14 @@ const filter = function ( array, test ){
 */
 
 
-/*arrow method*/
+/*arrow method
 
 const add = (a, b, c) => { a + b + c };
 
 const add1 = x => x * 5;
 
 const add3 = () => {
-    console.log('Hello')     /*<----- anonimus function*/
+    console.log('Hello')     <----- anonimus function
 };
 
 const add4 = (...args) => {
@@ -228,3 +228,74 @@ const add4 = (...args) => {
 }
 
 add4(1, 2, 3, 4, 5);
+
+*/
+/*
+const hotel = {
+    name : 'Hilton',
+    stars : 5,
+    clients : ['Matviy', 'Bob', 'Tom', 'Jhon', 'Anna', 'Dylan'],
+    pool : true,
+}
+/*
+console.log(hotel); //{name: 'Hilton', stars: 5, clients: Array(6), pool: true}
+console.log(hotel.name) //first method// //Hilton//
+console.log(hotel['name'])//second method //Hilton
+console.log(hotel.pool) //true
+
+hotel.name = 'Rixos'; // name Hotel
+console.log(hotel); //{name: 'Rixos', stars: 5, clients: Array(6), pool: true}
+
+hotel.capacity = 150;
+console.log(hotel) //{name: 'Rixos', stars: 5, clients: Array(6), pool: true, capacity: 150}
+
+hotel ['addres'] = 'Red Sea';
+console.log(hotel)  //{name: 'Rixos', stars: 5, clients: Array(6), pool: true, capacity: 150, …}
+
+
+delete hotel.addres;  //first method
+console.log(hotel);  //{name: 'Rixos', stars: 5, clients: Array(6), pool: true, capacity: 150}
+
+delete hotel['clients'];
+console.log(hotel);  //{name: 'Rixos', stars: 5, pool: true, capacity: 150}
+
+console.log(admin) //undefined 
+*/
+/*
+let name = 'Rixos';
+let stars = 5;
+const hotel = {
+    name,
+    stars,
+    capacity : 150,
+}
+
+console.log(hotel)  //{name: 'Rixos', stars: 5, capacity: 150}
+
+*/
+/*
+const key = 'person';
+const getKey = function () {
+    return 'age';
+};
+const user = {
+    [key]: 'Bob',
+    [getKey()]: 20,
+}
+
+console.log(user) //{person: 'Bob', age: 20}
+*/
+const hotel = {
+    name: 'Rixos',
+    stars: 5,
+    capacity: 150,
+    message() {
+        console.log('Hello!')
+    },
+    showName () {
+        console.log(thisname)
+    },
+}
+
+hotel.message() //Hello!
+
