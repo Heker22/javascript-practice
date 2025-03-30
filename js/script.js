@@ -145,7 +145,7 @@ repeat(5);
 repeat(20);
 repeat(2);
 */
-
+/*
 
 const print = function (value) {
     console.log(value);
@@ -165,7 +165,7 @@ const repeat = function (n, action) {
 
 repeat(3, pretty)
 
-
+*/
 
 /*ДЗ лдя 24/03/25*/
 
@@ -284,7 +284,7 @@ const user = {
 }
 
 console.log(user) //{person: 'Bob', age: 20}
-*/
+
 const hotel = {
     name: 'Rixos',
     stars: 5,
@@ -292,10 +292,35 @@ const hotel = {
     message() {
         console.log('Hello!')
     },
-    showName () {
+    showName() {
         console.log(thisname)
     },
 }
 
 hotel.message() //Hello!
+*/
 
+
+/*Scrivi una funzione che restituisca un nuovo array contenente tutti gli elementi dell'array moltiplicati per un dato numero utilizzando una funzione di callback*/
+
+/*ДЗ для 31/03/25*/
+
+const filter = function (array, test) {
+
+    const filtredEL = [];
+
+    for (let element of array) {
+        const add = test(element)
+    }
+
+    if(passed){
+        filtredEL = element * array.length;
+
+    }
+
+
+    return filtredEL
+};
+
+
+filtredELe = [2, 4, 8, 1, 7];
