@@ -303,24 +303,77 @@ hotel.message() //Hello!
 
 /*Scrivi una funzione che restituisca un nuovo array contenente tutti gli elementi dell'array moltiplicati per un dato numero utilizzando una funzione di callback*/
 
-/*ДЗ для 31/03/25*/
+/*ДЗ для 31/03/25
 
-const filter = function (array, test) {
+function multiplyArray(array, mutiplier, callback) {
 
-    const filtredEL = [];
 
-    for (let element of array) {
-        const add = test(element)
+    let result = [];
+
+    for (let i = 0; i < array.length; i++) {
+        result.push(callback(array[i], mutiplier))
     }
 
-    if(passed){
-        filtredEL = element * array.length;
+    return result;
 
-    }
-
-
-    return filtredEL
 };
 
+function multiply(num, multiplier) {
 
-filtredELe = [2, 4, 8, 1, 7];
+    return num * multiplier;
+}
+
+const numbers = [2, 7, 4, 6];
+const multiplierNumb = multiplyArray(numbers, 3, multiply);
+console.log(multiplierNumb)
+*/
+
+/*practice objects*/
+
+/*1
+
+const person = {
+    name: 'Matvyi',
+    age: 12,
+    gender: 'boy',
+    message() { console.log(`Hello my name is ${this.name} i'm ${this.age}, and i'm a ${this.gender} `) }
+
+}
+
+person.message();
+
+*/
+
+/*2*/
+
+const car = {
+    brand: 'audi',
+    model: 'rs6',
+    year:  '2022',
+    color: 'black matter',
+   message(){
+    console.log(`This car is an: ${this.brand} model ${this.model} from the ${this.year} year. It's color is:${this.color}. `)
+   }
+}
+
+car.message();
+
+/*3*/
+
+const book = {
+    title: 'Javscript',
+    author: 'Nik Morgan',
+    year: 2010,
+    genre: 'for kids',
+    message(newTitle, newAuthor, newYear, newGenre){
+        this.title = newTitle;
+        this.author  = newAuthor;
+        this.year = newYear;
+        this.genre = newGenre;
+    }
+
+}
+
+book.message('Javascript', 'Matvi Holovatyi', 2012, 'fantasy');
+
+console.log(book)
