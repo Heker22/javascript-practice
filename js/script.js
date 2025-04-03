@@ -344,7 +344,7 @@ person.message();
 
 */
 
-/*2*/
+/*2
 
 const car = {
     brand: 'audi',
@@ -358,7 +358,7 @@ const car = {
 
 car.message();
 
-/*3*/
+/*3
 
 const book = {
     title: 'Javscript',
@@ -377,3 +377,29 @@ const book = {
 book.message('Javascript', 'Matvi Holovatyi', 2012, 'fantasy');
 
 console.log(book)
+
+*/
+
+
+/*ДЗ лдя 4/04/25
+
+Створіть об'єкт "restaurant" з властивостями "name", "cuisine", "address" та "rating". Додайте до об'єкту метод, який дозволить змінювати значення властивостей "address" та "rating"
+
+/*1*/
+
+const restaurant = {
+    name: 'Matviy chef ',
+    cuisine: 'international food',
+    address: 'food street 34',
+    rating: '2 stars',
+
+    message(newAddress, newRating) {
+        this.address = newAddress;
+        this.rating = newRating;
+    }
+
+}
+
+restaurant.message('Viale della pizza 10', '5 stars');
+
+console.log(restaurant);
