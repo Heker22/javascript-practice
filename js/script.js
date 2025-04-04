@@ -380,12 +380,65 @@ console.log(book)
 
 */
 
+/*4
+
+const students = [
+    { name: 'Matvyi', age: 12, gender: 'boy', grade: 10 },
+    { name: 'Achille', age: 13, gender: 'boy', grade: 7 / 5 },
+    { name: 'Leo', age: 12, gender: 'boy', grade: 9 }];
+
+
+
+ function media (students) {
+
+    if(students.length === 0 ) return 0 ;
+
+    let total = 0;
+
+    for(let i = 0; i < students.length; i++){
+
+        total += students[i].grade 
+
+    }
+
+    return total / students.length;
+
+};
+
+const average = media(students);
+console.log(average);
+
+/*5*/
+
+const weather = {
+    temperature: null,
+    humidity: 30,
+    windspeed: 10,
+
+    message() {
+        return this.temperature < 0
+
+            ? 'temperature beyond zero'
+            : 'temperature above zero'
+    }
+
+
+
+}
+
+const final = prompt('The temperature is beyond 0 gradius celcius');
+
+weather.temperature = Number(final);
+
+console.log(weather.message()
+);
+
 
 /*ДЗ лдя 4/04/25
 
 Створіть об'єкт "restaurant" з властивостями "name", "cuisine", "address" та "rating". Додайте до об'єкту метод, який дозволить змінювати значення властивостей "address" та "rating"
 
-/*1*/
+/*1
 
 const restaurant = {
     name: 'Matviy chef ',
@@ -403,3 +456,4 @@ const restaurant = {
 restaurant.message('Viale della pizza 10', '5 stars');
 
 console.log(restaurant);
+*/
