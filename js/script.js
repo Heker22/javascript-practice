@@ -408,7 +408,7 @@ const students = [
 const average = media(students);
 console.log(average);
 
-/*5*/
+/*5
 
 const weather = {
     temperature: null,
@@ -457,3 +457,51 @@ restaurant.message('Viale della pizza 10', '5 stars');
 
 console.log(restaurant);
 */
+
+
+/*object for in*/
+
+
+
+const hotel = {
+    name: 'Rixos',
+    stars: 5,
+    capacity: 300,
+}
+
+/*
+for ( const key in hotel) {
+    console.log('Value:' , hotel[key])
+}*/
+
+
+/*methods
+
+const keys = Object.keys(hotel); /*(3) ['name', 'stars', 'capacity']
+
+console.log(keys)
+
+const values = Object.values(hotel); /*(3) ['Rixos', 5, 300]
+
+console.log(values)
+
+const entries = Object.entries(hotel); /*(3) [Array(2), Array(2), Array(2)]
+
+console.log(entries)
+
+*/
+
+
+
+const user = {
+    name: 'Luigi',
+    age: 13,
+    gender: 'Boy',
+    address: 'Pavia'
+}
+
+const keys = Object.keys(user)/*(3) ['name', ...]*/
+
+for (const key of keys) {
+    console.log(user[key])
+}
