@@ -462,13 +462,13 @@ console.log(restaurant);
 /*object for in*/
 
 
-
+/*
 const hotel = {
     name: 'Rixos',
     stars: 5,
     capacity: 300,
 }
-
+*/
 /*
 for ( const key in hotel) {
     console.log('Value:' , hotel[key])
@@ -492,7 +492,7 @@ console.log(entries)
 */
 
 
-
+/*
 const user = {
     name: 'Luigi',
     age: 13,
@@ -500,8 +500,112 @@ const user = {
     address: 'Pavia'
 }
 
-const keys = Object.keys(user)/*(3) ['name', ...]*/
+const keys = Object.keys(user)/*(3) ['name', ...]
 
 for (const key of keys) {
     console.log(user[key])
 }
+
+*/
+
+
+/*
+const user = {
+    name: 'Luigi',
+    age: 13,
+    gender: 'Boy',
+    address: 'Pavia'
+}
+
+const entries = Object.entries(user);
+
+for ( entry of entries){
+    const key = entry[0]
+    const value = entry[1]
+
+    console.log(`${key} - ${value}`)
+}
+*/
+/*
+const food = {
+    apple: 5,
+    cheese: 2,
+
+    meat: 3,
+    bread: 1,
+    oranges: 5,
+}
+
+const values = Object.values(food);
+
+let total = 0;
+
+for ( const value of values){
+    total += value
+}
+
+console.log(total);
+
+
+
+const temp = [10, 15, 12, 6, 8, 4, -2, 0, -3];
+
+const min = Math.min(...temp);
+
+console.log(min)
+
+const names = [ 'Matvyi', 'Bob', 'Martin', 'Nick', 'Sigma', 'Alex' ]
+
+const copyOfNames = [...names]
+
+console.log(names);
+
+console.log(copyOfNames);
+
+console.log(names === copyOfNames)
+
+*/
+/*
+
+const names = [ 'Matvyi', 'Bob', 'Martin', 'Nick', 'Sigma', 'Alex' ]
+
+const copy = [...names, 'Mary']
+
+console.log(names);/*(6) ['Matvyi', 'Bob', 'Martin', 'Nick', 'Sigma', 'Alex']
+console.log(copy) /*(7) ['Matvyi', 'Bob', 'Martin', 'Nick', 'Sigma', 'Alex', 'Mary']
+*/
+/*
+const arr1 = [1, 2, 3, 4];
+const arr2 = ['Matvyi', 'Bob', 'Martin'];
+const newArr = [... arr1 , ...arr2];
+
+console.log(newArr)
+
+const a = { x: 1, y: 2}
+const b = { x: 3, z: 4}
+
+const c = Object.assign({}, a, b)
+
+console.log(c)
+
+const d = {...a, ...b, l: 5}
+
+console.log(d)
+*/
+/*
+const temp = [18, 14, 12, 21, 17, 29, 24]
+
+const min = Math.min(...temp);
+const max = Math.max(...temp);
+
+console.log(min)
+console.log(max)
+*/
+
+const numbers1 = [1, 2, 3, 54, 12];
+const numbers2 = [5, 65, 32, 14];
+
+
+const numb = [...numbers1, 15, 30, ...numbers2]
+
+console.log(numb)
