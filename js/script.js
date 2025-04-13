@@ -600,7 +600,7 @@ const max = Math.max(...temp);
 
 console.log(min)
 console.log(max)
-*/
+
 
 const numbers1 = [1, 2, 3, 54, 12];
 const numbers2 = [5, 65, 32, 14];
@@ -609,3 +609,29 @@ const numbers2 = [5, 65, 32, 14];
 const numb = [...numbers1, 15, 30, ...numbers2]
 
 console.log(numb)
+*/
+
+
+/*ДЗ для 14/04/25
+
+Scrivi uno script che, per l'oggetto utente, esegua in sequenza:
+- aggiunge un campo umore con il valore 'felice'
+- sostituisce il valore di hobby con 'paracadutismo'
+- sostituisce il premio di valore con falso
+- stampa il contenuto dell'oggetto utente nel formato chiave:valore -utilizzando Object.keys() e per...di
+
+
+
+/*1*/
+
+
+const utente = {
+    nome: 'Mango',
+    età: 20,
+    hobby: 'html',
+    premio: vero,
+  };
+
+
+const keys = Object.keys(utente);
+
