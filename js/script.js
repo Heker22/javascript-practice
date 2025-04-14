@@ -622,16 +622,180 @@ Scrivi uno script che, per l'oggetto utente, esegua in sequenza:
 
 
 
+
+
+/*1
+
+
+const user = {
+    name: 'Mango',
+    age: 20,
+    hobby: 'html',
+    premium: true,
+};
+
+user.mood = 'happy';
+user.hobby = 'paracadutism';
+user.premium = false;
+
+
+const keys = Object.keys(user);
+
+for (const key of keys ){
+
+    console.log(`${key}: ${user[key]}` )
+}
+
+
+*/
+
+
+/*practice object
+
+Напиши функцію countProps(obj), яка рахує кількість властивостей в об'єкті. Функція повертає число — кількість властивостей.
+const countProps = function (obj) {
+  // твій код
+};
+
+
+/*
+ * Викличи функції для перевірки працездатності твоєї реалізації.
+ */
+
+
 /*1*/
 
-
-const utente = {
-    nome: 'Mango',
-    età: 20,
-    hobby: 'html',
-    premio: vero,
-  };
+const countProps = function (obj) {
 
 
-const keys = Object.keys(utente);
 
+    return Object.values(obj).length
+
+};
+
+
+
+
+console.log(countProps({})); // 0
+
+
+console.log(countProps({ name: 'Mango', age: 2 })); // 2
+
+
+console.log(countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 })); // 3
+
+
+/*2
+
+Напиши функцію findBestEmployee(employees), яка приймає об'єкт співробітників і повертає ім'я найпродуктивнішого (який виконав більше всіх задач). Співробітники і кількість виконаних завдань містяться як властивості об'єкта в форматі "ім'я":"кількість задач".
+const findBestEmployee = function (employees) {
+  // твій код
+};
+
+
+
+ * Викличи функції для перевірки працездатності твоєї реалізації.
+
+console.log(
+    findBestEmployee({
+      ann: 29,
+      david: 35,
+      helen: 1,
+      lorence: 99,
+    }),
+  ); // lorence
+  
+  
+  console.log(
+    findBestEmployee({
+      poly: 12,
+      mango: 17,
+      ajax: 4,
+    }),
+  ); // mango
+  
+  
+  console.log(
+    findBestEmployee({
+      lux: 147,
+      david: 21,
+      kiwi: 19,
+      chelsy: 38,
+    }),
+  ); // lux
+
+*/
+
+
+const findBestEmployee = function (employees) {
+    let bestEmployee = '';
+    let maxTasks = 0;
+
+    for ( const name in employees ){
+        if (employees[name] > maxTasks){
+            maxTasks = employees[name]
+            bestEmployee = name;
+        }
+    }
+
+    return bestEmployee;
+
+};
+
+console.log(
+    findBestEmployee({
+        ann: 29,
+        david: 35,
+        helen: 1,
+        lorence: 99,
+    }),
+); // lorence
+
+
+console.log(
+    findBestEmployee({
+        poly: 12,
+        mango: 17,
+        ajax: 4,
+    }),
+); // mango
+
+
+console.log(
+    findBestEmployee({
+        lux: 147,
+        david: 21,
+        kiwi: 19,
+        chelsy: 38,
+    }),
+); // lux
+
+
+/*
+Scrivi una funzione che riceverà un array e il nome dell'amico che vuoi trovare 
+console.log(findFriendByName(amici, 'Poly'));
+console.log(findFriendByName(amici, 'Chelsy'));*/
+
+/*3*/
+
+
+
+const findFriendByName = function(allFriends, friendsName){
+    for(const friend of allFriends){
+        if( friend.name === friendsName ){
+            return `find this name: ${friendsName}`
+        }
+    }
+
+    return `not found name ${friendsName}`
+};
+
+const friends = [
+    { name: 'Mango', online: false },
+    { name: 'Kiwi', online: true },
+    { name: 'Poly', online: false },
+    { name: 'Ajax', online: false },
+  ];
+
+console.log(findFriendByName(friends, 'Poly'));
+console.log(findFriendByName(friends, 'Chelsy'));
