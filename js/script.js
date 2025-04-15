@@ -663,7 +663,7 @@ const countProps = function (obj) {
  */
 
 
-/*1*/
+/*1
 
 const countProps = function (obj) {
 
@@ -684,7 +684,7 @@ console.log(countProps({ name: 'Mango', age: 2 })); // 2
 
 console.log(countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 })); // 3
 
-
+*/
 /*2
 
 Напиши функцію findBestEmployee(employees), яка приймає об'єкт співробітників і повертає ім'я найпродуктивнішого (який виконав більше всіх задач). Співробітники і кількість виконаних завдань містяться як властивості об'єкта в форматі "ім'я":"кількість задач".
@@ -726,7 +726,7 @@ console.log(
 
 */
 
-
+/*
 const findBestEmployee = function (employees) {
     let bestEmployee = '';
     let maxTasks = 0;
@@ -769,14 +769,14 @@ console.log(
         chelsy: 38,
     }),
 ); // lux
-
+*/
 
 /*
 Scrivi una funzione che riceverà un array e il nome dell'amico che vuoi trovare 
 console.log(findFriendByName(amici, 'Poly'));
 console.log(findFriendByName(amici, 'Chelsy'));*/
 
-/*3*/
+/*3
 
 
 
@@ -799,3 +799,146 @@ const friends = [
 
 console.log(findFriendByName(friends, 'Poly'));
 console.log(findFriendByName(friends, 'Chelsy'));
+
+*/
+/*practice*/
+/*1
+const user = {
+    name: 'Bob',
+    age: 20,
+    gender: 'Boy'
+}
+
+const {name, age, gender, lastName = 'Dou'} = user;
+console.log(name, age, gender, lastName)
+
+*/
+/*2
+const hotel = {
+    name: 'Hilton',
+    stars: 5,
+    capacity: 150,
+
+}
+
+
+const {stars, ...group} = hotel;
+console.log(stars)
+console.log(group)
+
+*/
+/*
+
+const students = {
+    units: {
+        biology: 100,
+        geography: 95,
+    },
+
+    skills: [100, 90, 95],
+    name: 'Bob',
+
+}
+
+const {
+    units: { biology, geography },
+    skills: [skill1, skill2, skill3],
+    name = students,
+} = students;
+
+console.log(biology);
+console.log(geography);
+console.log(skill1);
+console.log(skill2);
+console.log(skill3);
+console.log(name);
+
+*/
+
+
+const names = [ 'Tom', 'Nick', 'Bob', 'Jhon'];
+
+const [ names1, names2, names3, names4] = names;
+
+console.log(names3)
+
+/* 1st method
+const rgb = [155, 200, 120];
+const [red, green, blue] = rgb;
+
+console.log(`Red: ${red}, Green: ${green}, Blue: ${blue},`)
+*/
+
+/*2nd method
+
+let red, green, blue;
+[red, green, blue] = rgb;
+console.log(`Red: ${red}, Green: ${green}, Blue: ${blue},`)
+
+*/
+
+/*
+const rgb = [155, 200, 120];
+const [red, green, blue, alfa = 0.5] = rgb;
+
+console.log(`Red: ${red}, Green: ${green}, Blue: ${blue},`)
+*/
+/*
+const rgb = [155, 200, 120];
+const [red, ...colors] = rgb;
+
+console.log(red);
+console.log(colors);
+
+*/
+/*
+const car = {
+    make: 'Toyota',
+    model: 'Camry',
+    year: 2020,
+    features: ['power windows', 'rear camera', 'navigation'],
+    safety: {
+      airbags: true,
+      antilock_brakes: true,
+      stability_control: true
+    }
+  }
+
+const {
+    make,
+    model,
+    year,
+    features: [feature1, feature2, feature3],
+    safety: {airbags, antilock_brakes, stability_control},
+} = car;
+
+console.log(model)
+*/
+
+/*2*/
+
+
+const movie = {
+  title: 'The Shawshank Redemption',
+  director: {
+    name: 'Frank Darabont',
+    nationality: 'American'
+  },
+  actors: ['Tim Robbins', 'Morgan Freeman'],
+  release_year: 1994,
+  ratings: {
+    imdb: 9.3,
+    rotten_tomatoes: 90
+  }
+}
+
+const {
+    title,
+    director: {name, nationality},
+    actors: [actors1, actors2],
+    release_year,
+    ratings: {imdb, rotten_tomatoes}
+} = movie;
+
+
+console.log(imdb)
