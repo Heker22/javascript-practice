@@ -856,9 +856,9 @@ console.log(name);
 */
 
 
-const names = [ 'Tom', 'Nick', 'Bob', 'Jhon'];
+const names = ['Tom', 'Nick', 'Bob', 'Jhon'];
 
-const [ names1, names2, names3, names4] = names;
+const [names1, names2, names3, names4] = names;
 
 console.log(names3)
 
@@ -915,7 +915,7 @@ const {
 console.log(model)
 */
 
-/*2*/
+/*2
 
 
 const movie = {
@@ -942,3 +942,128 @@ const {
 
 
 console.log(imdb)
+
+
+*/
+
+
+/*3
+
+Напишіть функцію, яка приймає об'єкт, що містить інформацію про студента (ім'я, прізвище, оцінки за три предмети) та використовує деструктуризацію для повернення середньої оцінки студента.
+
+
+
+
+function calculateAverageGrade ({grades}){
+
+    let sum = 0;
+    for (let i = 0; i < grades.length; i++){
+
+        sum += grades[i] 
+    }
+
+    return sum / grades.length
+}
+
+const student = {
+    name: 'Bruce',
+    surname: 'Lee',
+    grades: [4, 5, 3]
+  };
+ 
+  console.log(calculateAverageGrade(student));
+  
+*/
+
+
+/*4
+
+
+Напишіть функцію, яка отримує об'єкт зі списком електронних адрес (поле "emails") та використовує деструктуризацію для повернення першої адреси в цьому списку.
+
+
+
+function getFirstEmail ({emails: [firstEmails, secondEmails, thirdEmails]}){
+
+return thirdEmails
+    
+}
+
+
+const person = {
+    name: 'John',
+    emails: ['john@gmail.com', 'john@example.com', 'john123@yahoo.com']
+  };
+ 
+  console.log(getFirstEmail(person)); // 'john@gmail.com'
+
+*/
+
+
+/*5
+
+Напишіть функцію, яка отримує масив об'єктів з інформацією про товари (назва, ціна, кількість) та використовує деструктуризацію для обчислення загальної вартості товарів.
+
+*/
+
+function calculateTotalCost(items) {
+
+    let total = 0;
+
+    for (const { price, quantity } of items) {
+
+        total += price * quantity
+
+    }
+
+    return total
+}
+
+
+
+
+const items = [
+    { name: 'Футболка', price: 250, quantity: 2 },
+    { name: 'Джинси', price: 800, quantity: 1 },
+    { name: 'Кросівки', price: 1200, quantity: 1 }
+];
+console.log(calculateTotalCost(items)); // 250 * 2 + 800 * 1 + 1200 * 1 = 2500
+
+
+
+/*5
+Напишіть функцію, яка отримує об'єкт зі списком користувачів (поле "users"), де кожен користувач є об'єктом з полями "ім'я" та "вік", та використовує деструктуризацію для повернення списку користувачів, які старші за 18 років.
+
+
+
+*/
+
+
+function getAdultUsers({ users }) {
+
+    const result = []
+
+    for (const { name, age } of users) {
+
+        if (age > 18) {
+            result.push({name, age})
+        }
+    }
+
+    return result
+
+}
+
+
+
+
+const data = {
+    users: [
+        { name: 'John', age: 25 },
+        { name: 'Jane', age: 17 },
+        { name: 'Bob', age: 30 },
+        { name: 'Alice', age: 20 }
+    ]
+};
+
+console.log(getAdultUsers(data)); // [{ name: 'John', age: 25 }, { name: 'Bob', age: 30 }, { name: 'Alice', age: 20 }]
