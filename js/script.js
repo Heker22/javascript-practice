@@ -853,7 +853,7 @@ console.log(skill2);
 console.log(skill3);
 console.log(name);
 
-*/
+
 
 
 const names = ['Tom', 'Nick', 'Bob', 'Jhon'];
@@ -862,7 +862,7 @@ const [names1, names2, names3, names4] = names;
 
 console.log(names3)
 
-/* 1st method
+ 1st method
 const rgb = [155, 200, 120];
 const [red, green, blue] = rgb;
 
@@ -1004,7 +1004,7 @@ const person = {
 
 Напишіть функцію, яка отримує масив об'єктів з інформацією про товари (назва, ціна, кількість) та використовує деструктуризацію для обчислення загальної вартості товарів.
 
-*/
+
 
 function calculateTotalCost(items) {
 
@@ -1036,7 +1036,7 @@ console.log(calculateTotalCost(items)); // 250 * 2 + 800 * 1 + 1200 * 1 = 2500
 
 
 
-*/
+
 
 
 function getAdultUsers({ users }) {
@@ -1046,7 +1046,7 @@ function getAdultUsers({ users }) {
     for (const { name, age } of users) {
 
         if (age > 18) {
-            result.push({name, age})
+            result.push({ name, age })
         }
     }
 
@@ -1067,3 +1067,82 @@ const data = {
 };
 
 console.log(getAdultUsers(data)); // [{ name: 'John', age: 25 }, { name: 'Bob', age: 30 }, { name: 'Alice', age: 20 }]
+
+
+
+/*ДЗ лдя 24/04/25
+
+Задача 1
+Зробити декструктуризацію об'єкта:
+
+
+*/
+/*
+
+const books = {
+    count: 3,
+    list: [
+        {
+            title: 'The Great Gatsby',
+            author: 'F. Scott Fitzgerald',
+            year: 1925
+        },
+        {
+            title: 'To Kill a Mockingbird',
+            author: 'Harper Lee',
+            year: 1960
+        },
+        {
+            title: '1984',
+            author: 'George Orwell',
+            year: 1949
+        }
+    ]
+}
+
+
+const {
+
+    count,
+
+    list: [
+        {title1, author1, year1},
+        {title2, author2, year2},
+        {title3, author3, year3}
+    ]
+
+} = books
+
+
+console.log(list(title1))*/
+
+
+/*2
+Задача 2
+Напишіть функцію, яка отримує об'єкт з ім'ям, прізвищем та віком та використовує деструктуризацію для повернення рядка, що містить інформацію про цю людину в такому форматі: "Мене звати Ім'я Прізвище і мені Вік років".
+
+
+*/
+/*
+function personInfo(person) {
+
+    let info = '';
+
+    for (const { name, surname, age } of person) {
+
+        info = `Hello my name is ${name}, my surname is ${surname} and i'm ${age} years old`
+    }
+
+    return info
+};
+
+
+
+
+const person = {
+    name: 'Nelli',
+    surname: 'Laroy',
+    age: 25
+};
+console.log(personInfo(person));
+*/
