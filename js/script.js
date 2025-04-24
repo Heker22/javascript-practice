@@ -1077,7 +1077,7 @@ console.log(getAdultUsers(data)); // [{ name: 'John', age: 25 }, { name: 'Bob', 
 
 
 */
-/*
+
 
 const books = {
     count: 3,
@@ -1100,40 +1100,53 @@ const books = {
     ]
 }
 
-
+/* 1st method
 const {
 
     count,
 
-    list: [
-        {title1, author1, year1},
-        {title2, author2, year2},
-        {title3, author3, year3}
-    ]
-
+    list
 } = books
 
+const [book1, book2, book3] = list
 
-console.log(list(title1))*/
+const { title: title1, author: author1, year: year1 } = book1;
+
+const { title: title2, author: author2, year: year2 } = book2;
+
+const { title: title3, author: author3, year: year3 } = book3;*/
 
 
+
+
+/*2 method
+
+
+const { list: [
+    { title: title1 },
+    { title: title2 },
+    { title: title3 }
+] } = books
+
+
+
+
+
+
+
+
+console.log(title3)
+*/
 /*2
 Задача 2
 Напишіть функцію, яка отримує об'єкт з ім'ям, прізвищем та віком та використовує деструктуризацію для повернення рядка, що містить інформацію про цю людину в такому форматі: "Мене звати Ім'я Прізвище і мені Вік років".
 
 
-*/
-/*
-function personInfo(person) {
 
-    let info = '';
 
-    for (const { name, surname, age } of person) {
+function personInfo ({name,surname,age}){
 
-        info = `Hello my name is ${name}, my surname is ${surname} and i'm ${age} years old`
-    }
-
-    return info
+    return `Hello my name is ${name} ${surname} and i'm ${age} years old.`
 };
 
 
