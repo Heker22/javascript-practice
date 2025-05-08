@@ -1159,3 +1159,36 @@ const person = {
 };
 console.log(personInfo(person));
 */
+
+
+/*1st method*
+
+const end = function(){}
+
+*2nd method*
+
+function end (){}
+
+
+
+const numbers = [100,58,210,487,65,12,10,9];
+
+const filtredNumb = [];
+
+for(let i = 0; i < numbers.length; i++){
+    
+    if(numbers[i] > 100){
+        filtredNumb.push(numbers[i])
+    }
+
+    console.log(filtredNumb)
+}
+*/
+
+
+const numbers = [100, 58, 210, 487, 65, 12, 10, 9];
+
+const filtred = numbers.filter(numb => { return numb > 100; });
+
+console.log(filtred);
+
