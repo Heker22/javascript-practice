@@ -1183,7 +1183,7 @@ for(let i = 0; i < numbers.length; i++){
 
     console.log(filtredNumb)
 }
-*/
+
 
 
 const numbers = [100, 58, 210, 487, 65, 12, 10, 9];
@@ -1192,3 +1192,65 @@ const filtred = numbers.filter(numb => { return numb > 100; });
 
 console.log(filtred);
 
+
+
+/*12/05/25*/
+
+/*forEach - нічого не повертає
+
+const number = [1,2,3,4,5,6];
+
+//1st method
+
+for(let i = 0; i < number.length; i++){
+    console.log(number[i])
+}
+
+//2nd method
+
+numbers.forEach(num => console.log(num))
+
+*/
+
+
+/*map - повертає колекцію
+
+
+const number = [1,2,3,4,5,6];
+
+const newNumbers = number.map(num => num * 5)
+
+console.log(newNumbers)
+
+
+
+
+const user = [
+
+    {name: 'Bob', age: 15},
+    {name: 'Nick', age: 12},
+    {name: 'Tom', age: 14},
+]
+
+const names = user.map(user => user.name)
+console.log(names)
+
+/*filter - повертає колекцію*/
+
+const number = [1,2,3,4,5,6,7,8,9,10];
+
+console.log(number.filter(num => num > 5));//6
+console.log(number.filter(num => num < 5));
+console.log(number.filter(num => num === 20));
+
+
+const user = [
+
+    {name: 'Bob', age: 15, isActive: true,},
+    {name: 'Nick', age: 12, isActive: false},
+    {name: 'Tom', age: 14, isActive: true},
+]
+
+
+console.log(user.filter(user => user.isActive))//is active
+console.log(user.filter(user => !user.isActive))//is not active ! = not
