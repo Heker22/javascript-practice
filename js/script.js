@@ -1239,7 +1239,7 @@ console.log(names)
 
 const number = [1,2,3,4,5,6,7,8,9,10];
 
-console.log(number.filter(num => num > 5));//6
+console.log(number.filter(num => num > 5));
 console.log(number.filter(num => num < 5));
 console.log(number.filter(num => num === 20));
 
@@ -1254,7 +1254,7 @@ const user = [
 
 console.log(user.filter(user => user.isActive))//is active
 console.log(user.filter(user => !user.isActive))//is not active ! = not
-*/
+
 
 
 
@@ -1269,3 +1269,89 @@ const players = [
 console.log(players.filter(players => players.name))//Mango,poly,Kiwi,Ajax,Chelsy
 console.log(players.filter(players => players.online))//Poly,Kiwi,Chelsy
 console.log(players.filter(players => !players.online))//Ajax,Mango
+*/
+
+
+
+//method find шукає унікальний елемент
+/*
+
+const users = [
+    {id:'1234', name:'Bob', age:17},
+    {id:'1965', name:'Bob', age:19},
+    {id:'7412', name:'Anna', age:15},
+    {id:'8523', name:'Monika', age:27},
+]
+
+
+const users = user.find(user => user.id === '7412');
+console.log(users)
+
+
+const getUser = (arr,id) => arr.find(x => x.id === id)
+console.log(getUser(users, '1234'));
+console.log(getUser(users, '8523'));
+*/
+
+// method every and some
+// method every: every components of the array has to be (example: >10)
+// method some: 1 component of the array is (example >10) then il will be true even if all others are <10
+/*
+
+
+
+const numbers1 = [2, 5, 7, 3, 4];
+const numbers2 = [12, 5, 87, 23, 74];
+
+const isBig = val => val >= 10;
+
+console.log(numbers1.every(isBig))//true
+console.log(numbers2.every(isBig))//false 5 < 10
+
+console.log(numbers1.some(isBig))//true
+console.log(numbers2.some(isBig))//true
+
+
+/*practice
+
+function getEven(arr){
+
+    return arr.filter(num => num % 2 === 0);
+} 
+
+const numbers = [12, 18, 35, 24, 36, 58];
+const evenNumb = getEven(numbers);
+
+console.log(evenNumb)
+
+
+const array = [1, 27, 3, 44, 4, 5, 16, 6, 7];
+
+function filteredRange(arr, a, b){
+    return arr.filter(item => item >= a && item <= b);
+}
+
+const filtered = filteredRange(array, 4, 16)
+
+console.log(filtered);
+
+*/
+
+function getName(peopleArray) {
+
+    return peopleArray
+
+    .filter(person => person.age >= 18)
+    .map(person => person.name)
+}
+
+
+const people = [
+  { name: 'John', age: 32, occupation: 'programmer' },
+  { name: 'Jane', age: 26, occupation: 'teacher' },
+  { name: 'Mike', age: 42, occupation: 'engineer' },
+  { name: 'Emily', age: 17, occupation: 'designer' }
+];
+
+const adultNames = getName(people);
+console.log(adultNames);
