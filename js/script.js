@@ -1528,7 +1528,7 @@ const strictName = array2.map(string => string[0] + string[string.length - 1]) ;
 console.log(strictName)
 */
 
-/*next ex.*/
+/*next ex.
 
 const users = [
   {
@@ -1625,3 +1625,48 @@ const getUserWithEmail = (users, email) => {
 
 console.log(getUserWithEmail(users, 'shereeanthony@kog.com')); // {об'єкт користувача Sheree Anthony}
 console.log(getUserWithEmail(users, 'elmahead@omatom.com')); // {об'єкт користувача Elma Head}
+*/
+
+/*r
+/*method reduce*/
+
+const numbers = [1, 8, 5, 7, 2, 23, 17, 8, 65, 10];
+
+const sum = numbers.reduce((acc, value) => acc + value, 0)
+
+console.log(sum)//146
+
+
+const tweets = [
+    {id: 0, likes: 40, tags:['js', 'html']},
+    {id: 1, likes: 78, tags:['node', 'css']},
+    {id: 2, likes: 42, tags:['scss', 'css', 'html']},
+    {id: 3, likes: 31, tags:['js']},
+    {id: 4, likes: 18, tags:['react','js']},
+
+]
+
+const tags = tweets.reduce((allTags, tweet) => {
+    allTags.push(...tweet.tags);
+    return allTags;
+}, [] );
+
+console.log(tags)
+
+
+const tags1 = tweets => tweets.reduce((allTags, tweet) => {
+    allTags.push(...tweet.tags);
+    return allTags;
+}, [] );
+
+
+
+
+/*
+const likes = tweets.reduce((totalLikes, tweet) => totalLikes + tweet.likes, 0)
+
+console.log(likes)
+
+const countLikes = tweets => tweets.reduce((totalLikes, tweet) => totalLikes + tweet.likes, 0);
+console.log(countLikes(tweets));
+*/
