@@ -1628,7 +1628,7 @@ console.log(getUserWithEmail(users, 'elmahead@omatom.com')); // {об'єкт к�
 */
 
 /*r
-/*method reduce*/
+/*method reduce
 
 const numbers = [1, 8, 5, 7, 2, 23, 17, 8, 65, 10];
 
@@ -1670,3 +1670,21 @@ console.log(likes)
 const countLikes = tweets => tweets.reduce((totalLikes, tweet) => totalLikes + tweet.likes, 0);
 console.log(countLikes(tweets));
 */
+
+
+/*ДЗ для 26/05/25
+
+Порахувати загальну кількість товарів в кошику*/
+const cart = [
+  { label: 'Apples', price: 100, quantity: 2 },
+  { label: 'Bananas', price: 120, quantity: 3 },
+  { label: 'Lemons', price: 70, quantity: 4 },
+  ];
+
+
+const totalAmount = cart => cart.reduce((total, amount) =>
+  total.push(...amount.quantity)
+);
+
+
+ console.log(totalAmount);
