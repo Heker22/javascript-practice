@@ -1674,7 +1674,7 @@ console.log(countLikes(tweets));
 
 /*ДЗ для 26/05/25
 
-Порахувати загальну кількість товарів в кошику*/
+Порахувати загальну кількість товарів в кошику
 const cart = [
   { label: 'Apples', price: 100, quantity: 2 },
   { label: 'Bananas', price: 120, quantity: 3 },
@@ -1683,8 +1683,99 @@ const cart = [
 
 
 const totalAmount = cart => cart.reduce((total, amount) =>
-  total.push(...amount.quantity)
+ total + amount.quantity, 0
 );
 
 
- console.log(totalAmount);
+ console.log(totalAmount(cart));
+
+
+/*practice
+
+const players = [
+  { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false },
+  { id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true },
+  { id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true },
+  { id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false },
+  { id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true },
+];
+
+const totalTime = players => players.reduce((maxTime, time) => 
+maxTime + time.timePlayed, 0
+);
+
+console.log(totalTime(players))
+
+const totalPoints = players => players.reduce((maxPoints, point) => 
+maxPoints + point.points, 0 
+);
+
+console.log(totalPoints(players));
+
+/*sort practice
+
+
+const numbers = [9, 4, 6, 8, 3, 1, 7];
+
+console.log(numbers);
+
+console.log('After sort:', numbers.sort())
+
+const names = ['Jhon', 'Tom', 'Bob', 'Anna', 'Marry']
+
+console.log(names.sort())
+
+/*2*/
+
+const test = ['Y', 'f', 'A', 'a', 'y', 'N', 'g', 'U', 'B', 'F', 'O', 'o'];
+
+console.log(test.sort())
+
+
+const user = [
+    { name: 'Anna', activeDays: 19 },
+    { name: 'Tom', activeDays: 22 },
+    { name: 'Bob', activeDays: 20 },
+    { name: 'Pedro', activeDays: 15 },
+    { name: 'Marry', activeDays: 5 },
+];
+
+const sortDays = (a, b) => b.activeDays - a.activeDays; //from + to -
+console.log(user.sort(sortDays))
+
+//const sortDays = (a, b) => a.activeDays - b.activeDays; //from - to ++
+//console.log(user.sort(sortDays))
+
+const fruits = ['pear', 'orange', 'apple', 'banana']
+
+fruits.sort(function(a, b){ //from a to b
+return a.localeCompare(b);
+})
+
+console.log(fruits)
+
+
+//fruits.sort(function(a, b){ from b to a
+//return a.localeCompare(b);
+//})
+
+//console.log(fruits)
+/*
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+const even = numbers.filter(x => x % 2 === 0);
+const doubled = even.map(x => x * 2);
+const reversed = doubled.reverse();
+
+console.log(reversed)
+
+/**/
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+const result = numbers
+
+.filter(x => x % 2 === 0)
+.map(y => y * 2)
+.reverse()
