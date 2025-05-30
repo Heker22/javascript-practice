@@ -1725,7 +1725,7 @@ const names = ['Jhon', 'Tom', 'Bob', 'Anna', 'Marry']
 
 console.log(names.sort())
 
-/*2*/
+/*2
 
 const test = ['Y', 'f', 'A', 'a', 'y', 'N', 'g', 'U', 'B', 'F', 'O', 'o'];
 
@@ -1770,7 +1770,7 @@ const reversed = doubled.reverse();
 
 console.log(reversed)
 
-/**/
+/*
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -1779,3 +1779,62 @@ const result = numbers
 .filter(x => x % 2 === 0)
 .map(y => y * 2)
 .reverse()
+
+ 
+
+/*ДЗ для 30/05/25
+/*Задача 1
+Відсортувати по кількості проведенного часу в грі (від більшого до меншого)
+const players = [
+  { id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false },
+  { id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true },
+  { id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true },
+  { id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false },
+  { id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true },
+];
+
+
+const playTime = players.sort(( a,b) => b.timePlayed - a.timePlayed)
+
+console.log(playTime)
+
+/*Задача 2
+
+const arr = [
+    { name: 'John', age: 32 },
+    { name: 'Jane', age: 26 },
+    { name: 'Mike', age: 42 },
+    { name: 'Emily', age: 29 }
+  ];
+
+const filter = arr.sort((a, b) => a.name.localeCompare(b.name))
+
+console.log(filter)
+
+*/
+const people = [
+  { name: 'John',  surname: 'Doe',  age: 32, occupation: 'programmer' },
+  { name: 'Jane', surname: 'Lee',  age: 26, occupation: 'teacher' },
+  { name: 'Mike', surname: 'Watson', age: 42, occupation: 'engineer' },
+  { name: 'Emily', surname: 'Brad', age: 29, occupation: 'designer' }
+];
+
+const first = people.map((person,index) => ({
+    id: index + 1,
+    fullName: `${person.name} ${person.surname}`
+}))
+
+console.log(first)
+
+/*4*/
+
+const array1 = [1, 2, 3, 44, 4, 5, 6, 6, 7];
+const array2 = [5,12, 3, 14, 4, 5, 6, 6, 7];
+
+const array3 = array1.concat(array2) ;
+
+console.log(array3)
+
+const array4 = array3.filter((item, index, arr) => arr.indexOf(item) === index )
+
+console.log(array4)
