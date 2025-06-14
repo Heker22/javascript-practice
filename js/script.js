@@ -1811,7 +1811,7 @@ const filter = arr.sort((a, b) => a.name.localeCompare(b.name))
 
 console.log(filter)
 
-*/
+
 const people = [
   { name: 'John',  surname: 'Doe',  age: 32, occupation: 'programmer' },
   { name: 'Jane', surname: 'Lee',  age: 26, occupation: 'teacher' },
@@ -1826,7 +1826,7 @@ const first = people.map((person,index) => ({
 
 console.log(first)
 
-/*4*/
+/*4
 
 const array1 = [1, 2, 3, 44, 4, 5, 6, 6, 7];
 const array2 = [5,12, 3, 14, 4, 5, 6, 6, 7];
@@ -1838,3 +1838,6 @@ console.log(array3)
 const array4 = array3.filter((item, index, arr) => arr.indexOf(item) === index )
 
 console.log(array4)
+
+*/
+
