@@ -1839,5 +1839,68 @@ const array4 = array3.filter((item, index, arr) => arr.indexOf(item) === index )
 
 console.log(array4)
 
+
+
+
+// Процедурний підхід
+
+const baseSalary = 20000;
+
+const overtime = 10;
+
+const rate = 20;
+
+const getWage = (baseSalary, overtime, rate) => {
+    baseSalary + overtime * rate
+}
+
+getWage(baseSalary,overtime,rate)
+
+//OOP
+
+const employee = {
+    baseSalary: 20000,
+    overtime:10,
+    rate:20,
+    getWage(){
+        return this.baseSalary + this.overtime *  this.rate
+    }
+
+}
+
+employee.getWage();
+
+
+const animal = {
+    legs: 4,
+}
+
+const dog = Object.create(animal);
+dog.name = 'Sharik'
+
+console.log(dog)
+
+console.log(animal.isPrototypeOF(dog))//true
+console.log(dog.hasOwnProperty(name))//true
+console.log(dog.hasOwnProperty(legs))//false
 */
 
+const animal = {
+    eats: true,
+
+}
+
+const dog = Object.create(animal)
+dog.barks = true;
+
+//for( const key in dog){
+//    console.log(key)
+//}
+
+//for ( const key in dog){
+//    if (!dog.hasOwnProperty(key)) continue;
+//    console.log(key);
+//}
+
+const dogKeys = Object.keys(dog)
+console.log(dogKeys)
