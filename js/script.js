@@ -1902,5 +1902,37 @@ dog.barks = true;
 //    console.log(key);
 //}
 
-const dogKeys = Object.keys(dog)
-console.log(dogKeys)
+//const dogKeys = Object.keys(dog)
+//console.log(dogKeys)
+
+
+class User{
+    constructor({name,email}) {
+        this.name = name;
+        this.email = email;
+    }
+
+    getEmail() {
+        return this.email;
+    }
+
+
+    changeEmail(newEmail) {
+        this.email = newEmail
+    }
+
+}
+
+const matviy = new User({
+    name: 'Matviy',
+    email: 'matviy@gmail.com',
+
+});
+const anna = new User({
+    name: 'Anna',
+    email: 'anna@gmail.com',
+
+});
+
+console.log(matviy)
+console.log(anna)
