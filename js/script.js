@@ -1905,7 +1905,7 @@ dog.barks = true;
 //const dogKeys = Object.keys(dog)
 //console.log(dogKeys)
 
-
+/*
 class User{
     constructor({name,email}) {
         this.name = name;
@@ -1936,3 +1936,77 @@ const anna = new User({
 
 console.log(matviy)
 console.log(anna)
+*/
+
+
+/*practcice
+
+class Person {
+    constructor(firstName, lastName){
+        this.firstName = firstName,
+        this.lastName = lastName
+    }
+
+
+    getFullName(){
+        return `${this.firstName} ${this.lastName}`
+    }
+}
+
+const person1 = new Person('Jhon', 'Doe');
+console.log(person1.getFullName());
+
+const person2 = new Person('Matviy', 'Holovatyi');
+console.log(person2.getFullName())
+
+
+2*/
+/*Створіть клас Rectangle, що містить властивості width та height. Додайте метод getArea(), який повертає площу прямокутника.
+ // 50
+
+
+class Rectangle {
+
+
+    constructor(width, height){
+        this.width = width,
+        this.height = height
+    }
+
+
+    getArea(){
+        return this.width * this.height
+    }
+
+
+}
+
+const rectangle1 = new Rectangle(10, 5);
+console.log(rectangle1.getArea());
+
+
+
+3*/
+/*Створіть клас Animal, який має властивість name. Створіть клас Dog, який наслідується від Animal і має властивість breed. Створіть об'єкт myDog класу Dog з ім'ям Buddy і породою Labrador Retriever.
+const myDog = new Dog('Buddy', 'Labrador Retriever');
+console.log(myDog); // { name: 'Buddy', breed: 'Labrador Retriever' }*/
+
+class Animal {
+
+    constructor(name){
+        this.name = name 
+    }
+}
+
+class Dog extends Animal {
+    
+    constructor(name, breed){
+        
+        super(name),
+
+        this.breed = breed
+    }
+}
+
+const myDog = new Dog('Buddy', 'Labrador Retriever');
+console.log(myDog); // { name: 'Buddy', breed: 'Labrador Retriever' }
