@@ -1883,7 +1883,7 @@ console.log(dog)
 console.log(animal.isPrototypeOF(dog))//true
 console.log(dog.hasOwnProperty(name))//true
 console.log(dog.hasOwnProperty(legs))//false
-*/
+
 
 const animal = {
     eats: true,
@@ -1989,24 +1989,237 @@ console.log(rectangle1.getArea());
 3*/
 /*Створіть клас Animal, який має властивість name. Створіть клас Dog, який наслідується від Animal і має властивість breed. Створіть об'єкт myDog класу Dog з ім'ям Buddy і породою Labrador Retriever.
 const myDog = new Dog('Buddy', 'Labrador Retriever');
-console.log(myDog); // { name: 'Buddy', breed: 'Labrador Retriever' }*/
+console.log(myDog); // { name: 'Buddy', breed: 'Labrador Retriever' }
 
 class Animal {
 
-    constructor(name){
-        this.name = name 
+    constructor(name) {
+        this.name = name
     }
 }
 
 class Dog extends Animal {
-    
-    constructor(name, breed){
-        
+
+    constructor(name, breed) {
+
         super(name),
 
-        this.breed = breed
+            this.breed = breed
     }
 }
 
 const myDog = new Dog('Buddy', 'Labrador Retriever');
 console.log(myDog); // { name: 'Buddy', breed: 'Labrador Retriever' }
+
+
+/*ДЗ для 14/07/25
+Задача 1
+Створіть клас Calculator, який буде мати наступні методи: add(), subtract(), multiply(), divide(). Кожен метод приймає два аргументи - числа, які необхідно обробити. Результатом кожного методу має бути результат відповідної математичної операції.
+
+
+
+class Calculator {
+
+
+
+    add(a, b) {
+
+        return a + b
+    }
+
+    subtract(a, b) {
+
+        return a - b
+    }
+
+    multiply(a, b) {
+
+        return a * b
+    }
+
+    divide(a, b) {
+
+
+        if (b === 0) {
+
+            return ' На нуль ділити не можна'
+        }
+
+        return a / b
+    }
+
+
+
+
+}
+
+const calculator = new Calculator();
+console.log(calculator.add(2, 3)); // 5
+console.log(calculator.subtract(5, 2)); // 3
+console.log(calculator.multiply(2, 4)); // 8
+console.log(calculator.divide(10, 2)); // 5
+console.log(calculator.divide(10, 0)); // На нуль ділити не можна
+
+/*Задача 2
+Нехай є базовий клас Animal з методом makeSound(). Створіть підклас Cat, який буде наслідувати Animal та перевизначати метод makeSound().
+
+
+class Animal {
+
+    makeSound() {
+
+        console.log('The Animal make a sound')
+    }
+}
+
+class Cat extends Animal {
+
+    makeSound() {
+        
+        console.log('Miao')
+    }
+}
+
+
+const animal = new Animal();
+animal.makeSound(); // "The animal makes a sound"
+
+const cat = new Cat();
+cat.makeSound(); // "Meow"*/
+
+
+/*practice 
+Створіть клас Animal, що містить властивість name. Додайте метод speak(), який повертає звук, який виділяє цей тварина. Створіть підклас Dog, що має свій власний метод speak(), який повертає звук "Bark!".
+
+
+
+
+class Animal {
+
+    constructor(name){
+        
+        this.name = name
+    }
+
+    speak(){
+        return 'Animal sound'
+    }
+}
+
+class Dog extends Animal {
+
+    speak(){
+
+
+        return 'Bark!'
+
+    }
+}
+
+
+class Snake extends Animal {
+
+    speak(){
+
+        return 'Shhhhhh!'
+    }
+}
+
+
+const animal1 = new Animal('Lion');
+console.log(animal1.speak()); // Animal sound
+
+const dog1 = new Dog('Pug');
+console.log(dog1.speak()); // Bark!
+
+const snake1 = new Snake('Yoda')
+console.log(snake1.speak());// Shhhhhh!
+*/
+
+
+/*Створіть клас Product, що містить властивості name, price, та discount. Додайте метод getDiscountPrice(), який повертає ціну товару зі знижкою, якщо така є (якщо властивість discount є ненульовим числом, знижка відсотків від ціни повинна бути застосована).
+
+
+class Product {
+
+    constructor(name, price , discount){
+        this.name = name;
+        this.price = price;
+        this.discount = discount;
+    }
+
+    getDiscountPrice(){
+
+        if(this.discount && this.discount > 0){
+            return this.price - (this.price * this.discount / 100)
+        }
+
+        return this.price
+    }
+}
+
+const product1 = new Product('Phone', 500, 10);
+console.log(product1.getDiscountPrice()); // 450
+
+
+/*Нехай є базовий клас Person з властивостями name та age. Створіть підклас Employee, який буде мати всі властивості базового класу, а також властивість position.
+*/
+
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+class Employee extends Person {
+    constructor(name, age, position) {
+
+        super(name, age);
+        this.position = position;
+
+    }
+
+
+    getInfo(){
+    
+        return `${this.name} is a ${this.position} and is ${this.age} years old`
+    }
+}
+
+const john = new Employee("John", 32, "programmer");
+console.log(john.getInfo()); // "John is a programmer and is 32 years old"
+const Matviy = new Employee('Matvyi', 12, 'programmer');
+console.log(Matviy.getInfo()); //'Matvyi is a programmer and is 12 years old'
+
+/*Створіть клас Shape, який має властивість color і метод draw. Створіть клас Circle, який наслідується від Shape і має властивість radius та перезаписує метод draw для відображення кола. Створіть об'єкт myCircle класу Circle з радіусом 5 і коліром "red".
+*/
+
+class Shape {
+    constructor(color){
+        this.color = color;
+    }
+
+    draw(){
+        console.log('Drawen shape')
+    }
+}
+
+class Circle extends Shape {
+    constructor(color, radius){
+        super(color);
+        this.radius = radius;
+    }
+
+    draw(){
+        console.log(`Drawen radius ${this.radius} ` )
+    }
+
+    
+
+
+}
+
+const myCircle = new Circle('red', 5);
+myCircle.draw(); // Drawing a circle with radius 5
+console.log(myCircle.color); // "red"
