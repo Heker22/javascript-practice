@@ -2163,7 +2163,7 @@ console.log(product1.getDiscountPrice()); // 450
 
 
 /*Нехай є базовий клас Person з властивостями name та age. Створіть підклас Employee, який буде мати всі властивості базового класу, а також властивість position.
-*/
+
 
 class Person {
     constructor(name, age) {
@@ -2193,7 +2193,7 @@ const Matviy = new Employee('Matvyi', 12, 'programmer');
 console.log(Matviy.getInfo()); //'Matvyi is a programmer and is 12 years old'
 
 /*Створіть клас Shape, який має властивість color і метод draw. Створіть клас Circle, який наслідується від Shape і має властивість radius та перезаписує метод draw для відображення кола. Створіть об'єкт myCircle класу Circle з радіусом 5 і коліром "red".
-*/
+
 
 class Shape {
     constructor(color){
@@ -2223,3 +2223,27 @@ class Circle extends Shape {
 const myCircle = new Circle('red', 5);
 myCircle.draw(); // Drawing a circle with radius 5
 console.log(myCircle.color); // "red"
+
+*/
+
+
+
+
+
+
+
+
+/*dom*/
+
+
+
+
+const button = document.querySelector('.btn');
+
+button.style.backgroundColor = 'red';
+button.style.color = 'gray';
+button.style.borderColor = 'gray';
+button.style.borderRadius = '15px';
+
+
+
