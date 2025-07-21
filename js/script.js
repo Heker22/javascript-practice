@@ -2259,4 +2259,38 @@ title.textContent = 'My first title'
 title.style.color = 'grey'
 
 
+
+
+
+const newTitle = document.querySelector('#title');
+newTitle.textContent = 'New title';
+newTitle.style.color = 'skyblue';
+
+const newBtn = document.querySelector('#btn');
+newBtn.textContent = 'Buy here';
+newBtn.style.backgroundColor = 'white';
+newBtn.style.borderColor = 'skyblue';
+newBtn.style.color = 'skyblue';
+newBtn.style.padding = '10px 15px';
+newBtn.style.borderRadius = '5px';
+newBtn.style.cursor = 'pointer' ;
 */
+
+
+const links = document.querySelectorAll('ul a');
+links.forEach(link => { 
+const href = link.getAttribute('href')   
+    if (href.startsWith('http://') || 
+href.startsWith('ftp://') )
+{
+link.style.color = 'orange';
+}
+} )
+
+
+if (links.lenght > 0 ){
+
+    links[0].classList.add('first-link');
+    links[links.length -1].classList.add('last-link');
+
+}
