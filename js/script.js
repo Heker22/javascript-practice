@@ -2229,15 +2229,11 @@ console.log(myCircle.color); // "red"
 
 
 
-
-
-
-
 /*dom*/
 
 
 
-
+/*1
 const button = document.querySelector('.btn');
 
 button.style.backgroundColor = 'red';
@@ -2247,3 +2243,20 @@ button.style.borderRadius = '15px';
 
 
 
+const navList = document.querySelector('.site-nav')
+navList.style.backgroundColor = 'yellow';
+
+const firstLink  = navList.querySelector('a')
+firstLink.classList.add('site-nav_link')
+
+const httpsLink = navList.querySelector('a[href="https://"]')
+httpsLink.style.fontSize = '26px';
+httpsLink.style.color = 'red';
+httpsLink.style.backgroundColor = 'skyblue';
+
+const title = document.querySelector('.title')
+title.textContent = 'My first title'
+title.style.color = 'grey'
+
+
+*/
