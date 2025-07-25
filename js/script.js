@@ -4,9 +4,9 @@
 
 /*1
 const hello2 = function (name) {
-     
 
-    console.log(`Hello ${name}`) 
+
+    console.log(`Hello ${name}`)
 } ;
 
 
@@ -132,7 +132,7 @@ greet ('Matviy', sayGoodbye)
 */
 
 /*3
-  
+
 
 const repeat = function (n){
     for(let i = 0; i < n; i++){
@@ -198,14 +198,14 @@ const filter = function ( array, test ){
     for ( const el of array){
 
         const passed = test(el);
-        
+
     }
 
     if ( passed ){
         filtredEl.push(el)
     }
 
-    
+
 
     return filtredEl
 };
@@ -259,7 +259,7 @@ console.log(hotel);  //{name: 'Rixos', stars: 5, clients: Array(6), pool: true, 
 delete hotel['clients'];
 console.log(hotel);  //{name: 'Rixos', stars: 5, pool: true, capacity: 150}
 
-console.log(admin) //undefined 
+console.log(admin) //undefined
 */
 /*
 let name = 'Rixos';
@@ -397,7 +397,7 @@ const students = [
 
     for(let i = 0; i < students.length; i++){
 
-        total += students[i].grade 
+        total += students[i].grade
 
     }
 
@@ -704,8 +704,8 @@ console.log(
       lorence: 99,
     }),
   ); // lorence
-  
-  
+
+
   console.log(
     findBestEmployee({
       poly: 12,
@@ -713,8 +713,8 @@ console.log(
       ajax: 4,
     }),
   ); // mango
-  
-  
+
+
   console.log(
     findBestEmployee({
       lux: 147,
@@ -772,7 +772,7 @@ console.log(
 */
 
 /*
-Scrivi una funzione che riceverà un array e il nome dell'amico che vuoi trovare 
+Scrivi una funzione che riceverà un array e il nome dell'amico che vuoi trovare
 console.log(findFriendByName(amici, 'Poly'));
 console.log(findFriendByName(amici, 'Chelsy'));*/
 
@@ -959,7 +959,7 @@ function calculateAverageGrade ({grades}){
     let sum = 0;
     for (let i = 0; i < grades.length; i++){
 
-        sum += grades[i] 
+        sum += grades[i]
     }
 
     return sum / grades.length
@@ -970,9 +970,9 @@ const student = {
     surname: 'Lee',
     grades: [4, 5, 3]
   };
- 
+
   console.log(calculateAverageGrade(student));
-  
+
 */
 
 
@@ -986,7 +986,7 @@ const student = {
 function getFirstEmail ({emails: [firstEmails, secondEmails, thirdEmails]}){
 
 return thirdEmails
-    
+
 }
 
 
@@ -994,7 +994,7 @@ const person = {
     name: 'John',
     emails: ['john@gmail.com', 'john@example.com', 'john123@yahoo.com']
   };
- 
+
   console.log(getFirstEmail(person)); // 'john@gmail.com'
 
 */
@@ -1176,7 +1176,7 @@ const numbers = [100,58,210,487,65,12,10,9];
 const filtredNumb = [];
 
 for(let i = 0; i < numbers.length; i++){
-    
+
     if(numbers[i] > 100){
         filtredNumb.push(numbers[i])
     }
@@ -2274,7 +2274,7 @@ newBtn.style.color = 'skyblue';
 newBtn.style.padding = '10px 15px';
 newBtn.style.borderRadius = '5px';
 newBtn.style.cursor = 'pointer' ;
-*/
+
 
 
 const links = document.querySelectorAll('ul a');
@@ -2294,3 +2294,71 @@ if (links.lenght > 0 ){
     links[links.length -1].classList.add('last-link');
 
 }
+    */
+
+
+/*ДЗ для 25/07/25*/
+
+/*вирішити задачу: Створити розмітку  зі списком елементів. За допомогою JavaScript 
+отримати доступ до першого елемента списку та змінити його вміст на новий текст. 
+
+
+const change = document.querySelector('.list');
+change.firstElementChild.textContent = 'hi';
+
+const head = document.createElement('h2');
+head.textContent = 'My title';
+
+const img = document.createElement('img');
+img.src = 'https://images.theconversation.com/files/625049/original/file-20241010-15-95v3ha.jpg?ixlib=rb-4.1.0&rect=12%2C96%2C2671%2C1335&q=45&auto=format&w=668&h=324&fit=crop'
+img.alt = 'dog'
+
+console.log(img);*/
+
+
+/*Створити заголовок з текстом 'Привіт,
+ це перший мій створений елемент!' та додати до нього клас “title”, заздалегідь створений в style.css.
+  Додати заголовок на сторінку
+
+
+const heading = document.createElement('h1');
+heading.textContent = 'Hi this is my first title';
+heading.classList.add('title')
+
+document.body.appendChild(heading);
+
+const img = document.createElement('img');
+img.src =
+ 'https://images.theconversation.com/files/625049/original/file-20241010-15-95v3ha.jpg?ixlib=rb-4.1.0&rect=12%2C96%2C2671%2C1335&q=45&auto=format&w=668&h=324&fit=crop'
+img.alt = 'dog'
+
+document.body.appendChild(img)
+
+const button = document.createElement('button');
+button.textContent = 'Click here';
+button.style.display = 'block';
+
+button.type = 'button';
+
+button.id = 'myBtn';
+
+document.body.appendChild(button)
+*/
+
+const list = document.querySelector('.list');
+
+const link = document.createElement('a');
+
+link.href = '#';
+
+link.textContent = 'about';
+
+link.classList.add('site-nav__link');
+
+const item = document.createElement('li');
+
+item.classList.add('site-nav__item');
+
+item.appendChild(link)
+
+list.appendChild(item)
