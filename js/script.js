@@ -2343,7 +2343,7 @@ button.type = 'button';
 button.id = 'myBtn';
 
 document.body.appendChild(button)
-*/
+
 
 const list = document.querySelector('.list');
 
@@ -2362,3 +2362,60 @@ item.classList.add('site-nav__item');
 item.appendChild(link)
 
 list.appendChild(item)
+
+
+const blog = document.getElementById('blog');
+
+const item = `<article>
+  <h2>Новини дня</h2>
+  <p>Сьогодні відбулася важлива подія...</p>
+</article>`
+
+blog.insertAdjacentHTML('beforeend', item);
+
+const item1 = `<article>
+  <h2>Новини дня 2</h2>
+  <p>Сьогодні відбулася важлива подія...</p>
+</article>`
+
+blog.insertAdjacentHTML('afterbegin', item1);
+
+
+const item2 = `<article>
+  <h2>Новини дня 3</h2>
+  <p>Сьогодні відбулася важлива подія...</p>
+</article>`
+
+blog.insertAdjacentHTML('afterend', item2);
+
+
+
+const feature = document.getElementById("features");
+
+feature.innerHTML = `<ul>
+  <li>Швидко</li>
+  <li>Безпечно</li>
+  <li>Безкоштовно</li>
+</ul>` ;*/
+
+
+function createCard(name, description, price){
+    const article = document.createElement('article');
+    const title = document.createElement('h2');
+    title.textContent = name;
+    const description = document.createElement('p');
+    description.textContent = description;
+    const price = document.createElement('p');
+    price.textContent = `price : ${price}`
+    article.appendChild(title);
+    article.appendChild(description);
+    article.appendChild(price);
+    return article;
+
+}
+
+const container = document.querySelector('.js-products');
+
+const productCard = createCard('telefon', 'iphone', 1200);
+
+container.appendChild(productCard);
