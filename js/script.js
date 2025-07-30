@@ -2396,7 +2396,7 @@ feature.innerHTML = `<ul>
   <li>Швидко</li>
   <li>Безпечно</li>
   <li>Безкоштовно</li>
-</ul>` ;*/
+</ul>` ;
 
 
 function createCard(name, description, price){
@@ -2419,3 +2419,92 @@ const container = document.querySelector('.js-products');
 const productCard = createCard('telefon', 'iphone', 1200);
 
 container.appendChild(productCard);
+
+
+const saveBtn = document.querySelector('button[data-action="save"]');
+
+console.log(saveBtn.dataset.action);
+
+const closeBtn = document.querySelector('button[data-action="close"]');
+
+console.log(closeBtn.dataset.action);
+
+
+
+Категорія: Тварини
+Кількість елементів: 
+
+
+const item = document.querySelectorAll('#categories .item');
+
+console.log(`in the list there are ${item.length} categories ` );
+
+item.forEach(categorie => {
+    const title = categorie.querySelector('h2').textContent;
+    const itemsCount = categorie.querySelectorAll('ul li').length
+    console.log(`categoria ${title}`) 
+    console.log(`quantity ${itemsCount}`) 
+})
+
+
+
+
+const ingredients = [
+  'Картопля',
+  'Гриби',
+  'Часник',
+  'Помідори',
+  'Зелень',
+  'Приправи',
+];
+
+
+const list = document.querySelector('#ingredients');
+
+const items = ingredients.map(ingredient => {
+
+    const li = document.createElement('li');
+    li.textContent =  ingredient;
+
+return li;
+    
+})
+
+list.append(...items)
+/*
+ingredients.forEach(ingredient => {
+
+    const li = document.createElement('li');
+    li.textContent =  ingredient;
+    list.appendChild(li);
+ } )
+*/
+
+
+const images = [
+  {
+    url:
+      'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    alt: 'White and Black Long Fur Cat',
+  },
+  {
+    url:
+      'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
+  },
+  {
+    url:
+      'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    alt: 'Group of Horses Running',
+  },
+];
+
+
+const list = document.querySelector('#gallery');
+
+const markup = images.map(({
+    url, alt
+}) => {return
+`<li> <img src="${url}" alt="${alt}"> </li> `
+}).join('')
+list.insertAdjacentHTML('beforeend', markup)
