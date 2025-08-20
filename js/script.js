@@ -2479,7 +2479,7 @@ ingredients.forEach(ingredient => {
     list.appendChild(li);
  } )
 */
-
+/*
 
 const images = [
   {
@@ -2508,3 +2508,18 @@ const markup = images.map(({
 `<li> <img src="${url}" alt="${alt}"> </li> `
 }).join('')
 list.insertAdjacentHTML('beforeend', markup)
+*/
+
+
+
+
+const btn = document.getElementById('btn');
+
+const counter = document.getElementById('counter');
+
+let count = 0;
+
+btn.addEventListener('click', function(){
+    count++,
+    counter.textContent = count;
+})
