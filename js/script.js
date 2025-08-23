@@ -2512,7 +2512,7 @@ list.insertAdjacentHTML('beforeend', markup)
 
 
 
-
+/*
 const btn = document.getElementById('btn');
 
 const counter = document.getElementById('counter');
@@ -2522,4 +2522,79 @@ let count = 0;
 btn.addEventListener('click', function(){
     count++,
     counter.textContent = count;
+})
+
+
+
+const btn = document.getElementById('button');
+
+btn.addEventListener('click', function(){
+    if (btn.style.backgroundColor === 'red')
+    {btn.style.backgroundColor = 'aquamarine'}
+    else {
+        btn.style.backgroundColor = 'red'
+    }
+} )
+
+
+
+
+
+const title = document.getElementById('myTitle');
+
+const btn = document.querySelector('.btnColor');
+
+btn.addEventListener('click', function(){
+    title.classList.add('title')
+} )
+
+const form = document.querySelector('.form');
+
+const text = document.getElementById('text');
+
+form.addEventListener('submit', function(event){
+    event.preventDefault();
+    text.textContent = 'You succesfuly registred, thank you!';
+})
+
+
+
+
+const btn = document.querySelector('.button');
+
+btn.addEventListener('click', function(){
+    alert('Hello world');
+})
+
+
+const btn = document.getElementById('btn');
+
+const input = document.getElementById('input');
+
+
+
+btn.addEventListener('click', function(){
+    const name = input.value.trim()
+    if(name){
+        alert(`Hello ${name}`)
+    }
+    else{
+        alert('Please insert your name')
+    }
+})*/
+
+
+const btn = document.getElementById('btn');
+
+let original = true;
+
+btn.addEventListener('click', function(){
+    if(original){
+        document.body.style.backgroundColor = 'gray';
+    }
+    else{
+        document.body.style.backgroundColor = 'white';
+    }
+
+    original = !original
 })
