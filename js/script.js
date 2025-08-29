@@ -2569,6 +2569,7 @@ btn.addEventListener('click', function(){
 
 const btn = document.getElementById('btn');
 
+
 const input = document.getElementById('input');
 
 
@@ -2581,9 +2582,9 @@ btn.addEventListener('click', function(){
     else{
         alert('Please insert your name')
     }
-})*/
+})
 
-
+/*
 const btn = document.getElementById('btn');
 
 let original = true;
@@ -2598,3 +2599,25 @@ btn.addEventListener('click', function(){
 
     original = !original
 })
+
+*/
+
+/*ДЗ для __*/
+
+
+/*1
+const btn = document.querySelector('.btn');
+
+const text = document.querySelector('.text')
+
+btn.addEventListener('click', function(event){
+    if(event === true){
+
+
+
+    }
+})
+*/
+
+
+/*2*/
