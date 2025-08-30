@@ -2604,7 +2604,7 @@ btn.addEventListener('click', function(){
 
 /*ДЗ для __*/
 
-
+/*
 
 const btn = document.querySelector('.button');
 
@@ -2612,8 +2612,9 @@ const text = document.querySelector('.text');
 
 btn.addEventListener('click', function (event) {
 
-    if (event === true) {
-        document.text.style.display(none)
+    if (event) {
+        
+        text.style.display('none')
     }
 
 })
@@ -2623,9 +2624,8 @@ btn.addEventListener('click', function (event) {
 
 
 
-/*
-const btn = document.querySelector('.button');
+const input = document.getElementById('input');
 
-btn.addEventListener('click', function(){
-    alert('Hello Marìtviy');
+input.addEventListener('input', function(){
+    alert('Hello Matvyi');
 })*/
