@@ -2605,19 +2605,27 @@ btn.addEventListener('click', function(){
 /*ДЗ для __*/
 
 
-/*1
-const btn = document.querySelector('.btn');
 
-const text = document.querySelector('.text')
+const btn = document.querySelector('.button');
 
-btn.addEventListener('click', function(event){
-    if(event === true){
+const text = document.querySelector('.text');
 
+btn.addEventListener('click', function (event) {
 
-
+    if (event === true) {
+        document.text.style.display(none)
     }
+
 })
-*/
 
 
-/*2*/
+
+
+
+
+/*
+const btn = document.querySelector('.button');
+
+btn.addEventListener('click', function(){
+    alert('Hello Marìtviy');
+})*/
