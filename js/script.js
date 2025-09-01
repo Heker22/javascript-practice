@@ -2602,9 +2602,9 @@ btn.addEventListener('click', function(){
 
 */
 
-/*ДЗ для __*/
+/*ДЗ для 9/09/25
 
-/*
+
 
 const btn = document.querySelector('.button');
 
@@ -2614,18 +2614,30 @@ btn.addEventListener('click', function (event) {
 
     if (event) {
         
-        text.style.display('none')
+        text.style.display = 'none';
     }
 
+}
+
+
+
+
+/*
+
+function greetUser (event){
+
+    const name = event.target.value ; 
+    
+    if(name){
+
+        alert('Hello ' + name + '!')
+    }
+
+}
+
+
+window.addEventListener('load', () => {
+    document.getElementById('username').addEventListener('input', greetUser );
+
 })
-
-
-
-
-
-
-const input = document.getElementById('input');
-
-input.addEventListener('input', function(){
-    alert('Hello Matvyi');
-})*/
+*/
