@@ -2640,4 +2640,96 @@ window.addEventListener('load', () => {
     document.getElementById('username').addEventListener('input', greetUser );
 
 })
-*/
+
+
+
+
+
+const btn = document.querySelector('.js-clear');
+
+const text = document.querySelector('.js-output');
+
+document.addEventListener('keydown', (event) => {
+
+    if(event.key.length === 1){
+        text.textContent += event.key
+    };
+} )
+
+
+btn.addEventListener('click', () => {
+
+    text.textContent = '';
+})
+
+
+
+
+const box = document.getElementById('box');
+
+document.addEventListener('keydown', (event) => {
+
+    if(event.key === 'g' || event.key === 'G' )  {
+        box.style.backgroundColor = 'green'
+    }
+
+    if(event.key === 'y' || event.key === 'Y' ) {
+        box.style.backgroundColor = 'yellow'
+    }
+
+    
+    if(event.key === 'r' || event.key === 'R' ) {
+        box.style.backgroundColor = 'red'
+    }
+})
+
+
+
+
+const text = document.getElementById('text');
+
+document.addEventListener('keydown', (event) => {
+    
+    text.textContent = `you typed ${event.key}, code: ${event.code}
+})*/
+
+
+
+const box = document.getElementById('box')
+
+
+let position = 50;
+
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') {
+        position -= 5;
+        box.style.left = position + '%';
+        box.style.backgroundColor = 'red';
+        box.style.borderRadius = '50%';
+    }
+
+
+    if (event.key === 'ArrowRight') {
+        position += 5;
+        box.style.left = position + '%';
+        box.style.backgroundColor = 'blue';
+        box.style.borderRadius = '50%';
+    }
+
+
+        if (event.key === 'ArrowUp') {
+        position += 5;
+        box.style.top = position + '%';
+        box.style.backgroundColor = 'purple';
+        box.style.borderRadius = '0';
+    }
+
+
+            if (event.key === 'ArrowDown') {
+        position -= 5;
+        box.style.top = position + '%';
+        box.style.backgroundColor = 'green';
+        box.style.borderRadius = '0';
+    }
+})
